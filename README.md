@@ -1,5 +1,15 @@
-# W01fw00d Portfolio v0.1
+## W01fw00d Portfolio v0.1
 My portfolio, as a way to introduce myself as a full-stack web developer.
 
-Includes:
+**Includes:**
 * React
+
+**To deploy, enter in the project directory and run:**
+
+```
+npm start
+```
+
+Runs the app in the development mode.
+
+Open http://localhost:3000 to view it in the browser.
