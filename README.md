@@ -13,3 +13,5 @@ npm start
 Runs the app in the development mode.
 
 Open http://localhost:3000 to view it in the browser.
+
+**This repository is currently being deployed on https://w01fw00d.github.io/w01fw00d_portfolio/**
