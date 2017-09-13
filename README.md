@@ -1,10 +1,5 @@
-# Barbarians! v1.1
-A silly little web-browser turn-based strategy game.
+# W01fw00d Portfolio v0.1
+My portfolio, as a way to introduce myself as a full-stack web developer.
 
 Includes:
-* Jquery 
-* Bootstrap.
-
-Greetings:
-* Art by Juanju (JJ)
-* Programming by W01fw00d
+* React
