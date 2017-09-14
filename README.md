@@ -1,8 +1,9 @@
-## W01fw00d Portfolio v0.1
+## W01fw00d Portfolio v0.2
 My portfolio, as a way to introduce myself as a full-stack web developer.
 
 **Includes:**
 * React
+* Reactstrap (React Bootstrap 4 components)
 
 **To deploy, enter in the project directory and run:**
 
