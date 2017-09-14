@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../assets/Programmer.css';
 
 class Programmer extends Component {
   render () {
@@ -10,10 +11,10 @@ class Programmer extends Component {
           github = 'https://github.com/W01fw00d';
       
     return (
-        <ul>
-            <h2>Name: <a target="_blank" href={linkedin}>{names.join(' ') + ' ' + surnames.join(' ')}</a> </h2>
-            <h2>Github: <a target="_blank" href={github}>{alias}</a></h2>
-        </ul>
+        <div className="Programmer">
+            <h3>Name: <a target="_blank" href={linkedin}>{names.join(' ') + ' ' + surnames.join(' ')}</a> </h3>
+            <h3>Github: <a target="_blank" href={github}>{alias}</a> </h3>
+        </div>
     );
   }
 }

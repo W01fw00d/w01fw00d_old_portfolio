@@ -1,26 +1,62 @@
 .App {
-  text-align: center;
+    text-align: center;
+    height: 100vh;
+    background-color: #CCC9DC;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.Avatar-logo {
+    -webkit-animation: flickerAnimation 10s infinite;
+   -moz-animation: flickerAnimation 10s infinite;
+   -o-animation: flickerAnimation 10s infinite;
+    animation: flickerAnimation 10s infinite;
+    height: 80px;
+}
+
+.Tech-logo {
+    animation: Tech-logo-spin infinite 20s linear;
+    height: 80px;
 }
 
 .App-header {
-  background-color: #222;
-/*  height: 150px;*/
-  padding: 20px;
-  color: white;
+    background-color: #1B2A41;
+    padding: 20px;
+    color: white;
+    height: 100px;
+}
+
+/* ANIMATIONS */
+
+@keyframes Tech-logo-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes flickerAnimation {
+    0%   { opacity:1; }
+    50%  { opacity:0; }
+    100% { opacity:1; }
+}
+@-o-keyframes flickerAnimation{
+    0%   { opacity:1; }
+    50%  { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes flickerAnimation{
+    0%   { opacity:1; }
+    50%  { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes flickerAnimation{
+    0%   { opacity:1; }
+    50%  { opacity:0; }
+    100% { opacity:1; }
 }
 
 /*
-.App-intro {
-  font-size: large;
+.animate-flicker {
+   -webkit-animation: flickerAnimation 1s infinite;
+   -moz-animation: flickerAnimation 1s infinite;
+   -o-animation: flickerAnimation 1s infinite;
+    animation: flickerAnimation 1s infinite;
 }
 */
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
