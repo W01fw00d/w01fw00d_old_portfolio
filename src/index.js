@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.css';
-import './assets/index.css';
-import App from './components/App';
+import './stylesheets/index.css';
+import MainLayout from './components/MainLayout';
 import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<MainLayout />, document.getElementById('root'));
 registerServiceWorker();

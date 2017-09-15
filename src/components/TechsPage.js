@@ -1,0 +1,62 @@
+import React, { Component } from 'react';
+import '../stylesheets/TechsPage.css';
+
+import react_logo from '../assets/react.svg';
+import backbone_logo from '../assets/backbone.png';
+import node_logo from '../assets/node.png';
+import cucumber_logo from '../assets/cucumber.png';
+import angular_logo from '../assets/angular.png';
+import ionic_logo from '../assets/ionic.png';
+
+import js6_logo from '../assets/js6.png';
+import htmlCss_logo from '../assets/html_css.png';
+import java_logo from '../assets/java.png';
+import python_logo from '../assets/python.png';
+
+
+class TechsPage extends Component {
+    render () {
+        let leftPositions = [],
+            topPositions = [];
+        
+        const techs = [
+                {id: 1, type: 'framework', name: 'React', logo: react_logo},
+                {id: 2, type: 'framework', name: 'Backbone', logo: backbone_logo},
+                {id: 3, type: 'framework', name: 'Node', logo: node_logo},
+                {id: 4, type: 'framework', name: 'Cucumber & Gherkin', logo: cucumber_logo},
+                {id: 5, type: 'framework', name: 'Angular', logo: angular_logo},
+                {id: 6, type: 'framework', name: 'Ionic', logo: ionic_logo},
+                {id: 7, type: 'language', name: 'ECMAScript 6', logo: js6_logo},
+                {id: 8, type: 'language', name: 'HTML5 & CSS3', logo: htmlCss_logo},
+                {id: 9, type: 'language', name: 'Java', logo: java_logo},
+                {id: 10, type: 'language', name: 'Python', logo: python_logo}
+            ],
+            techsTags = techs.map(tech => {
+                let imgStyle = {
+                    left: this.getRandomNumber(leftPositions, window.innerWidth), //1200
+                    bottom: this.getRandomNumber(topPositions, window.innerHeight - 150), //300
+                };
+
+                return <img key={tech.id} src={tech.logo} className="tech-logo" alt="logo" style={imgStyle} />
+            });
+
+        return (
+            <div className="TechsPage">
+                {techsTags}
+            </div>
+        );
+    }
+    
+    getRandomNumber(occupiedPositions, parentMaxNumber) {
+        const logoHeight = 120, 
+              maxNumber = parentMaxNumber - logoHeight,
+              minNumber = 0;
+        
+        let randomNumber = Math.random() * (maxNumber - minNumber) + minNumber;
+        
+        occupiedPositions.push(randomNumber);
+        return randomNumber;
+    }
+}
+  
+export default TechsPage;
