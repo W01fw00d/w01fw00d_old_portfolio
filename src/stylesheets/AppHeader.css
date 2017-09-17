@@ -24,6 +24,15 @@
     line-height: 45px;
 }
 
+.cv-link {
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+.cv-link, .cv-link:visited, .cv-link:hover, .cv-link:active {
+    color: white;
+}
+
 .github-ribbon {
     position: absolute; 
     top: 0; 

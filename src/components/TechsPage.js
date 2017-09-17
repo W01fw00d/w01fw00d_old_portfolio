@@ -5,8 +5,11 @@ import react_logo from '../assets/react.svg';
 import backbone_logo from '../assets/backbone.png';
 import node_logo from '../assets/node.png';
 import cucumber_logo from '../assets/cucumber.png';
+import selenium_logo from '../assets/selenium.png';
 import angular_logo from '../assets/angular.png';
 import ionic_logo from '../assets/ionic.png';
+import laravel_logo from '../assets/laravel.png';
+import android_logo from '../assets/android.png';
 
 import js6_logo from '../assets/js6.png';
 import htmlCss_logo from '../assets/html_css.png';
@@ -24,12 +27,15 @@ class TechsPage extends Component {
                 {id: 2, type: 'framework', name: 'Backbone', logo: backbone_logo},
                 {id: 3, type: 'framework', name: 'Node', logo: node_logo},
                 {id: 4, type: 'framework', name: 'Cucumber & Gherkin', logo: cucumber_logo},
-                {id: 5, type: 'framework', name: 'Angular', logo: angular_logo},
-                {id: 6, type: 'framework', name: 'Ionic', logo: ionic_logo},
-                {id: 7, type: 'language', name: 'ECMAScript 6', logo: js6_logo},
-                {id: 8, type: 'language', name: 'HTML5 & CSS3', logo: htmlCss_logo},
-                {id: 9, type: 'language', name: 'Java', logo: java_logo},
-                {id: 10, type: 'language', name: 'Python', logo: python_logo}
+                {id: 5, type: 'framework', name: 'Selenium', logo: selenium_logo},
+                {id: 6, type: 'framework', name: 'Angular', logo: angular_logo},
+                {id: 7, type: 'framework', name: 'Ionic', logo: ionic_logo},
+                {id: 8, type: 'framework', name: 'Laravel', logo: laravel_logo},
+                {id: 9, type: 'framework', name: 'Android', logo: android_logo},
+                {id: 10, type: 'language', name: 'ECMAScript 6', logo: js6_logo},
+                {id: 11, type: 'language', name: 'HTML5 & CSS3', logo: htmlCss_logo},
+                {id: 12, type: 'language', name: 'Java', logo: java_logo},
+                {id: 13, type: 'language', name: 'Python', logo: python_logo}
             ],
             techsTags = techs.map(tech => {
                 let imgStyle = {

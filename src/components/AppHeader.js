@@ -8,6 +8,8 @@ import github_logo from '../assets/github.png';
 import linkedin_logo from '../assets/linkedin.png';
 import codingame_logo from '../assets/codingame.png';
 
+import cv_eng_pdf from '../assets/gabrielRomay_cv_eng.pdf';
+
 class AppHeader extends Component {
   render () {
       
@@ -50,6 +52,12 @@ class AppHeader extends Component {
                             <a target="_blank" href={codingame}>
                                 <img src={codingame_logo} className="small-logo" alt="logo" />
                             </a>
+
+                            <a target="_blank" href={cv_eng_pdf} className="cv-link">
+                                CV
+                            </a>
+
+                            
                         </div>
 
                     </Col>
