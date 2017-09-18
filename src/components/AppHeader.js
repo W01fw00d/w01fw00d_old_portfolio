@@ -56,8 +56,6 @@ class AppHeader extends Component {
                             <a target="_blank" href={cv_eng_pdf} className="cv-link">
                                 CV
                             </a>
-
-                            
                         </div>
 
                     </Col>
