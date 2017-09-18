@@ -28,7 +28,7 @@ class AppHeader extends Component {
             <div className="solid-header">
                 <Row>
                     <Col xs="2">
-                        <Link to="/" >
+                        <Link to="/w01fw00d_portfolio/" >
                             <img src={avatar} className="avatar-logo" alt="avatar" /> 
                         </Link>
                     </Col>
@@ -67,7 +67,7 @@ class AppHeader extends Component {
             </div>
 
             <div>
-                <button> <Link to="/techs"> Technologies </Link> </button>
+                <button> <Link to="/w01fw00d_portfolio/techs"> Technologies </Link> </button>
                 <button className="hidden"> Principles </button>
                 <button className="hidden"> Work experience </button>
                 <button className="hidden"> Personal projects </button>

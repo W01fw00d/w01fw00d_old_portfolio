@@ -17,8 +17,8 @@ class MainLayout extends Component {
             <div className="MainLayout">
                 <AppHeader />
                 <Switch>
-                    <Route exact path="/" component={Home} />
-                    <Route exact path="/techs" component={TechsPage} />
+                    <Route exact path="/w01fw00d_portfolio/" component={Home} />
+                    <Route exact path="/w01fw00d_portfolio/techs" component={TechsPage} />
                 </Switch>
             </div>
         </BrowserRouter>
