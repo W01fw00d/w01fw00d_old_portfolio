@@ -40,14 +40,6 @@
     border: 0;
 }
 
-.hidden {
-    display: none;
-}
-
-a {
-    color: #CCC9DC;
-}
-
 /* ANIMATIONS */
 
 @keyframes flickerAnimation {

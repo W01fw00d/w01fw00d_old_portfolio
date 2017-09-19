@@ -1,66 +1,59 @@
 import React, { Component } from 'react';
-import CrossfadeImage from 'react-crossfade-image';
 import '../stylesheets/ProfessionalPage.css';
+
+import Gallery from './Gallery';
 
 import edreams_img1 from '../assets/gallery/edreams1.PNG';
 import edreams_img2 from '../assets/gallery/edreams2.PNG';
 import edreams_img3 from '../assets/gallery/edreams3.PNG';
+import edreams_img4 from '../assets/gallery/edreams4.PNG';
+
+import esbaluard_img1 from '../assets/gallery/esbaluard1.PNG';
+import esbaluard_img2 from '../assets/gallery/esbaluard2.PNG';
+import esbaluard_img3 from '../assets/gallery/esbaluard3.PNG';
+import esbaluard_img4 from '../assets/gallery/esbaluard4.PNG';
 
 const galleries = {
-          edreams: {
-              url: 'https://www.edreams.com/',
-              images: [
-                  edreams_img1,
-                  edreams_img2,
-                  edreams_img3
-              ],
-          },
-          esBaluard: {
-              url: 'http://www.esbaluard.org/',
-              images: [
-                  edreams_img1,
-                  edreams_img2,
-                  edreams_img3
-              ],
-          }
-      },
-      imageChangeFrequency = 3000;
-
-class HomePage extends Component {
-    constructor() {
-        super();
-        this.state = {
-            imageIndex: 0
-        };
-        this.changeImage = this.changeImage.bind(this);
-
-        setInterval(this.changeImage, imageChangeFrequency);
+    edreams: {
+        url: 'https://www.edreams.com/',
+        description: 'Info about eDreams',
+        images: [
+            edreams_img1,
+            edreams_img2,
+            edreams_img3,
+            edreams_img4
+        ]  
+    },
+    esBaluard: {
+        url: 'http://www.esbaluard.org/',
+        description: 'Info about esBaluard',
+        images: [
+            esbaluard_img1,
+            esbaluard_img2,
+            esbaluard_img3,
+            esbaluard_img4
+        ]
     }
+};
 
-    changeImage() {
-        if (this.state.imageIndex === galleries.edreams.images.length - 1) {
-            this.setState({ imageIndex: 0 });
-        } else {
-            this.setState({ imageIndex: this.state.imageIndex + 1 });
-        }
-    }
-
+class ProfessionalPage extends Component {
     render() {
         return (
             <div className="ProfessionalPage">
-            <div className="work-example-img">
-                <CrossfadeImage 
-                    src={galleries.edreams.images[this.state.imageIndex]}
-                    duration={1000}
-                    timingFunction={"ease-out"}
+                <Gallery 
+                    url={galleries.edreams.url} 
+                    images={galleries.edreams.images} 
+                    description={galleries.edreams.description}
                 />
-            </div>
-            <button onClick={this.changeImage}>
-                Change Image
-            </button>
+            
+                <Gallery 
+                    url={galleries.esBaluard.url} 
+                    images={galleries.esBaluard.images} 
+                    description={galleries.esBaluard.description}
+                />
             </div>
         );
     }
 }
 
-export default HomePage;
+export default ProfessionalPage;
