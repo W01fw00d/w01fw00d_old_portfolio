@@ -10,19 +10,18 @@ import codingame_logo from '../assets/codingame.png';
 
 import cv_eng_pdf from '../assets/gabrielRomay_cv_eng.pdf';
 
+const names = ['Gabriel'],
+    surnames = ['Romay', 'Machado'],
+    linkedin = 'https://www.linkedin.com/in/gabriel-romay-machado-40050a114',
+    codingame = 'https://www.codingame.com/profile/aa7bf59d70fe3c6f026b5788fd87eeb8411507',
+    github = {
+        alias: 'W01fw00d',
+        userUrl: 'https://github.com/W01fw00d',
+        portfolioUrl: 'https://github.com/W01fw00d/w01fw00d_portfolio'
+    };    
+
 class AppHeader extends Component {
   render () {
-      
-    const names = ['Gabriel'],
-          surnames = ['Romay', 'Machado'],
-          linkedin = 'https://www.linkedin.com/in/gabriel-romay-machado-40050a114',
-          codingame = 'https://www.codingame.com/profile/aa7bf59d70fe3c6f026b5788fd87eeb8411507',
-          github = {
-              alias: 'W01fw00d',
-              userUrl: 'https://github.com/W01fw00d',
-              portfolioUrl: 'https://github.com/W01fw00d/w01fw00d_portfolio'
-          };               
-      
     return (
         <div className="AppHeader">
             <div className="solid-header">
