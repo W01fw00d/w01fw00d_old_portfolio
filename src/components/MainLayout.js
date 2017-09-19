@@ -4,6 +4,7 @@ import { BrowserRouter, Switch, Route} from 'react-router-dom';
 import AppHeader from './AppHeader';
 import Home from './HomePage';
 import TechsPage from './TechsPage';
+import ProfessionalPage from './ProfessionalPage';
 
 import '../stylesheets/MainLayout.css';
 
@@ -28,6 +29,8 @@ class MainLayout extends Component {
                 <Switch>
                     <Route exact path="/w01fw00d_portfolio/" component={Home} />
                     <Route exact path="/w01fw00d_portfolio/techs" component={TechsPage} />
+                    <Route exact path="/w01fw00d_portfolio/professional" component={ProfessionalPage} />
+
                 </Switch>
             </div>
         </BrowserRouter>
