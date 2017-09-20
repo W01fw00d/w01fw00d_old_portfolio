@@ -2,15 +2,21 @@ import React, { Component } from 'react';
 import CrossfadeImage from 'react-crossfade-image';
 import '../stylesheets/Gallery.css';
 
+import CustomModal from './CustomModal';
+
 const imageChangeFrequency = 4000,
-      fadeOutDuration = 1000;
+      fadeOutDuration = 1000,
+      modalButtonLabel = 'Show info';
 
 class Gallery extends Component {
     constructor(props) {
-        super();
+        super(props);
         this.state = {
-            imageIndex: 0
+            imageIndex: 0,
+            modal: false
         };
+
+        this.showModal = this.showModal.bind(this);
         
         this.changeImage = this.changeImage.bind(this);
         setInterval(this.changeImage, imageChangeFrequency);
@@ -24,30 +30,30 @@ class Gallery extends Component {
         }
     }
     
-    showInfo() {
-        
+    showModal() {
+        this.setState({
+            showModal: !this.state.showModal
+        });
     }
     
-    render(props) {
+    render() {           
         return (
             <div className="Gallery">
-                <div className="work-example-img">
-                    <a target="_blank" href={this.props.url}>
-                        <CrossfadeImage 
-                            src={this.props.images[this.state.imageIndex]}
-                            duration={fadeOutDuration}
-                            timingFunction={"ease-out"}
-                        />
-                    </a>
+                <div className="work-example-img" onClick={this.showModal}>
+                    <CrossfadeImage 
+                        src={this.props.images[this.state.imageIndex]}
+                        duration={fadeOutDuration}
+                        timingFunction={"ease-out"}
+                    />
                 </div>
-
-                <div className="hidden">
-                    {this.props.description}
-                </div>
-
-                <button className="hidden" onClick={this.showInfo}>
-                    Show info
-                </button>
+                
+                <CustomModal
+                    showModal={this.state.showModal}
+                    modalButtonLabel={modalButtonLabel}
+                    modalTitle={this.props.modalTitle}
+                    description={this.props.description}
+                    links={this.props.links}
+                />
             </div>
         );
     }

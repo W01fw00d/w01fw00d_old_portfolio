@@ -1,20 +1,20 @@
 import React, { Component } from 'react';
 import '../stylesheets/TechsPage.css';
 
-import react_logo from '../assets/react.svg';
-import backbone_logo from '../assets/backbone.png';
-import node_logo from '../assets/node.png';
-import cucumber_logo from '../assets/cucumber.png';
-import selenium_logo from '../assets/selenium.png';
-import angular_logo from '../assets/angular.png';
-import ionic_logo from '../assets/ionic.png';
-import laravel_logo from '../assets/laravel.png';
-import android_logo from '../assets/android.png';
+import react_logo from '../assets/logos/react.svg';
+import backbone_logo from '../assets/logos/backbone.png';
+import node_logo from '../assets/logos/node.png';
+import cucumber_logo from '../assets/logos/cucumber.png';
+import selenium_logo from '../assets/logos/selenium.png';
+import angular_logo from '../assets/logos/angular.png';
+import ionic_logo from '../assets/logos/ionic.png';
+import laravel_logo from '../assets/logos/laravel.png';
+import android_logo from '../assets/logos/android.png';
 
-import js6_logo from '../assets/js6.png';
-import htmlCss_logo from '../assets/html_css.png';
-import java_logo from '../assets/java.png';
-import python_logo from '../assets/python.png';
+import js6_logo from '../assets/logos/js6.png';
+import htmlCss_logo from '../assets/logos/html_css.png';
+import java_logo from '../assets/logos/java.png';
+import python_logo from '../assets/logos/python.png';
 
 const techs = [
     {id: 1, type: 'framework', name: 'React', logo: react_logo},

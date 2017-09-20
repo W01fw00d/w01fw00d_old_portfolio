@@ -15,8 +15,12 @@ import esbaluard_img4 from '../assets/gallery/esbaluard4.PNG';
 
 const galleries = {
     edreams: {
-        url: 'https://www.edreams.com/',
-        description: 'Info about eDreams',
+        modalTitle: 'eDreams',
+        description: 'This is the flights ecommerce eDreams site. I worked in this project for a year.',
+        links: [{
+            label: 'Visit eDreams',
+            url: 'https://www.edreams.com/'
+        }],
         images: [
             edreams_img1,
             edreams_img2,
@@ -24,9 +28,20 @@ const galleries = {
             edreams_img4
         ]  
     },
+    
     esBaluard: {
-        url: 'http://www.esbaluard.org/',
-        description: 'Info about esBaluard',
+        modalTitle: 'Es Baluard',
+        description: 'This is the official site of the "Es Baluard" museum. I worked in this project while training as a web developer in Kamalyon.',
+        links: [
+            {
+                label: 'Visit Es Baluard site',
+                url: 'http://www.esbaluard.org/'
+            },
+            {
+                label: 'Visit Kamalyon site',
+                url: 'http://kamalyon.com/'
+            }   
+        ],
         images: [
             esbaluard_img1,
             esbaluard_img2,
@@ -43,13 +58,9 @@ class ProfessionalPage extends Component {
                 <Gallery 
                     url={galleries.edreams.url} 
                     images={galleries.edreams.images} 
+                    modalTitle={galleries.edreams.modalTitle}
                     description={galleries.edreams.description}
-                />
-            
-                <Gallery 
-                    url={galleries.esBaluard.url} 
-                    images={galleries.esBaluard.images} 
-                    description={galleries.esBaluard.description}
+                    links={galleries.edreams.links}
                 />
             </div>
         );
