@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
-import { Row, Col } from 'reactstrap';
+import { Button, Row, Col } from 'reactstrap';
 import { Link } from 'react-router-dom';
 import '../stylesheets/AppHeader.css';
 
 import avatar from '../assets/avatar_square.png';
-import github_logo from '../assets/github.png';
-import linkedin_logo from '../assets/linkedin.png';
-import codingame_logo from '../assets/codingame.png';
+import github_logo from '../assets/logos/github.png';
+import linkedin_logo from '../assets/logos/linkedin.png';
+import codingame_logo from '../assets/logos/codingame.png';
 
-import cv_eng_pdf from '../assets/gabrielRomay_cv_eng.pdf';
+import cv_eng_pdf from '../assets/cvs/gabrielRomay_cv_eng.pdf';
 
 const names = ['Gabriel'],
     surnames = ['Romay', 'Machado'],
@@ -66,10 +66,10 @@ class AppHeader extends Component {
             </div>
 
             <div>
-                <button> <Link to="/w01fw00d_portfolio/techs"> Technologies </Link> </button>
-                <button className="hidden"> Principles </button>
-                <button> <Link to="/w01fw00d_portfolio/professional"> Work experience </Link> </button>
-                <button className="hidden"> Personal projects </button>
+                <Button> <Link to="/w01fw00d_portfolio/techs"> Technologies </Link> </Button>
+                <Button className="hidden"> Principles </Button>
+                <Button> <Link to="/w01fw00d_portfolio/professional"> Work experience </Link> </Button>
+                <Button className="hidden"> Personal projects </Button>
             </div>
         </div>
     );

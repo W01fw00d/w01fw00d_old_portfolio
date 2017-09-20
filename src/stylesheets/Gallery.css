@@ -6,3 +6,11 @@
     width: 90%;    
     margin: 20px auto;
 }
+
+.modal-container {
+    position: relative;
+}
+
+.modal-container .modal, .modal-container .modal-backdrop {
+    position: absolute;
+}
