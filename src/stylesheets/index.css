@@ -9,3 +9,17 @@ body, #root {
 a {
     color: #CCC9DC;
 }
+
+.pointer {
+    cursor: pointer;
+}
+
+.spinning-logo:hover {
+    animation: logo-spin infinite 20s linear;
+}
+
+/* ANIMATIONS */
+@keyframes logo-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}

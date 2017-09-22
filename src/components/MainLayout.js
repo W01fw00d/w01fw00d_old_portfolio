@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 import { BrowserRouter, Switch, Route} from 'react-router-dom';
 
 import AppHeader from './AppHeader';
-import Home from './HomePage';
-import TechsPage from './TechsPage';
 import ProfessionalPage from './ProfessionalPage';
+import TechsPage from './TechsPage';
 
 import '../stylesheets/MainLayout.css';
 
@@ -25,9 +24,8 @@ class MainLayout extends Component {
                     <AppHeader />
 
                     <Switch>
-                        <Route exact path="/w01fw00d_portfolio/" component={Home} />
+                        <Route exact path="/w01fw00d_portfolio/" component={ProfessionalPage} />
                         <Route exact path="/w01fw00d_portfolio/techs" component={TechsPage} />
-                        <Route exact path="/w01fw00d_portfolio/professional" component={ProfessionalPage} />
                     </Switch>
                 </div>
             </BrowserRouter>

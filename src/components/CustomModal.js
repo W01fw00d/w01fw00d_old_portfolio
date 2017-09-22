@@ -2,7 +2,6 @@ import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
 class CustomModal extends React.Component {
-    
     constructor(props) {
         super(props);
         this.state = {
@@ -27,21 +26,22 @@ class CustomModal extends React.Component {
     }
     
     render() {        
-        return (
-            <div>
-                <Button onClick={this.toggle}> {this.props.modalButtonLabel} </Button>
-                <Modal isOpen={this.state.modal} toggle={this.toggle}>
-                    <ModalHeader toggle={this.toggle}> {this.props.modalTitle} </ModalHeader>
-                    <ModalBody>
-                        {this.props.description}
-                    </ModalBody>
-                    <ModalFooter>
-                        <a target="_blank" href={this.props.links[0].url}>
-                            <Button> {this.props.links[0].label} </Button>
-                        </a>
-                    </ModalFooter>
-                </Modal>
-            </div>
+        return ( 
+            <Modal isOpen={this.state.modal} toggle={this.toggle}>
+                <ModalHeader toggle={this.toggle}> {this.props.modalTitle} </ModalHeader>
+                <ModalBody>
+                    <p>{this.props.paragraphs[0]}</p>
+                    <p>{this.props.paragraphs[1]}</p>
+                </ModalBody>
+                <ModalFooter>
+                    <a target="_blank" href={this.props.links[0].url}>
+                        <Button className="pointer"> {this.props.links[0].label} </Button>
+                    </a>
+                    <a target="_blank" href={this.props.links[1].url}>
+                        <Button className="pointer"> {this.props.links[1].label} </Button>
+                    </a>
+                </ModalFooter>
+            </Modal>  
         );
     }
 }

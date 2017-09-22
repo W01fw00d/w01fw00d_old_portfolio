@@ -1,8 +1,5 @@
-.Gallery {
-    margin-bottom: 150px
-}
-
 .work-example-img {
+    cursor: pointer;
     width: 90%;    
     margin: 20px auto;
 }

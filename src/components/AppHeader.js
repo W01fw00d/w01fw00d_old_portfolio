@@ -28,7 +28,7 @@ class AppHeader extends Component {
                 <Row>
                     <Col xs="2">
                         <Link to="/w01fw00d_portfolio/" >
-                            <img src={avatar} className="avatar-logo" alt="avatar" /> 
+                            <img src={avatar} className="avatar-logo" title="Home" alt="avatar" /> 
                         </Link>
                     </Col>
 
@@ -41,18 +41,18 @@ class AppHeader extends Component {
                         <p>Full-stack Web Developer</p>
                         <div>
                             <a target="_blank" href={github.userUrl}>
-                                <img src={github_logo} className="small-logo" alt="logo" />
+                                <img src={github_logo} className="small-logo spinning-logo" title="Github Account" alt="logo" />
                             </a>
 
                             <a target="_blank" href={linkedin}>
-                                <img src={linkedin_logo} className="small-logo" alt="logo" />
+                                <img src={linkedin_logo} className="small-logo spinning-logo" title="LinkedIn Account" alt="logo" />
                             </a>
 
                             <a target="_blank" href={codingame}>
-                                <img src={codingame_logo} className="small-logo" alt="logo" />
+                                <img src={codingame_logo} className="small-logo spinning-logo" title="CodinGame Account" alt="logo" />
                             </a>
 
-                            <a target="_blank" href={cv_eng_pdf} className="cv-link">
+                            <a target="_blank" href={cv_eng_pdf} className="cv-link" title="Curriculum Vitae.pdf" >
                                 CV
                             </a>
                         </div>
@@ -68,7 +68,6 @@ class AppHeader extends Component {
             <div>
                 <Button> <Link to="/w01fw00d_portfolio/techs"> Technologies </Link> </Button>
                 <Button className="hidden"> Principles </Button>
-                <Button> <Link to="/w01fw00d_portfolio/professional"> Work experience </Link> </Button>
                 <Button className="hidden"> Personal projects </Button>
             </div>
         </div>
