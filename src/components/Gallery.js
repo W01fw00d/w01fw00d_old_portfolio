@@ -4,7 +4,7 @@ import '../stylesheets/Gallery.css';
 
 import CustomModal from './CustomModal';
 
-const imageChangeFrequency = 4000,
+const imageChangeFrequency = 15000,
       fadeOutDuration = 1000,
       modalButtonLabel = 'Show info';
 
@@ -39,7 +39,7 @@ class Gallery extends Component {
     render() {           
         return (
             <div className="Gallery">
-                <div className="work-example-img" onClick={this.showModal}>
+                <div className="work-example-img pointer" title="Click to know more!" onClick={this.showModal}>
                     <CrossfadeImage 
                         src={this.props.images[this.state.imageIndex]}
                         duration={fadeOutDuration}
@@ -51,7 +51,7 @@ class Gallery extends Component {
                     showModal={this.state.showModal}
                     modalButtonLabel={modalButtonLabel}
                     modalTitle={this.props.modalTitle}
-                    description={this.props.description}
+                    paragraphs={this.props.paragraphs}
                     links={this.props.links}
                 />
             </div>

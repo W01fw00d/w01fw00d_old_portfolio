@@ -45,7 +45,7 @@ class TechsPage extends Component {
 
             console.log(tech.logo);
 
-            return <img key={tech.id} src={tech.logo} className="tech-logo" alt="logo" style={imgStyle} />
+            return <img key={tech.id} src={tech.logo} title={tech.name} className="tech-logo" alt="logo" style={imgStyle} />
         });
 
         return (
