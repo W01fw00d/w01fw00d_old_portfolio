@@ -1,4 +1,4 @@
-## W01fw00d Portfolio v0.2
+## W01fw00d Portfolio v1.0
 My portfolio, as a way to introduce myself as a full-stack web developer.
 
 **Includes:**
