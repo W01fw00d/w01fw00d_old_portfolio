@@ -43,8 +43,6 @@ class TechsPage extends Component {
                 bottom: this.getRandomNumber(topPositions, window.innerHeight - 150), //300
             };
 
-            console.log(tech.logo);
-
             return <img key={tech.id} src={tech.logo} title={tech.name} className="tech-logo" alt="logo" style={imgStyle} />
         });
 
