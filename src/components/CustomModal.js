@@ -1,6 +1,24 @@
 import React from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
+const renderParagraphs = function(paragraphs) {
+    if (paragraphs) {
+            return paragraphs.map((paragraph, index) => (
+                <p key={index} >{paragraph}</p>
+            ));
+        }
+    },
+
+    renderUrlButtons = function(links) {
+        if (links) {
+            return links.map((link, index) => (
+                <a key={index} target="_blank" href={link.url}>
+                    <Button className="pointer"> {link.label} </Button>
+                </a>
+            ));
+        }
+    };
+
 class CustomModal extends React.Component {
     constructor(props) {
         super(props);
@@ -30,16 +48,10 @@ class CustomModal extends React.Component {
             <Modal isOpen={this.state.modal} toggle={this.toggle}>
                 <ModalHeader toggle={this.toggle}> {this.props.modalTitle} </ModalHeader>
                 <ModalBody>
-                    <p>{this.props.paragraphs[0]}</p>
-                    <p>{this.props.paragraphs[1]}</p>
+                    {renderParagraphs(this.props.paragraphs)}
                 </ModalBody>
                 <ModalFooter>
-                    <a target="_blank" href={this.props.links[0].url}>
-                        <Button className="pointer"> {this.props.links[0].label} </Button>
-                    </a>
-                    <a target="_blank" href={this.props.links[1].url}>
-                        <Button className="pointer"> {this.props.links[1].label} </Button>
-                    </a>
+                    {renderUrlButtons(this.props.links)}
                 </ModalFooter>
             </Modal>  
         );

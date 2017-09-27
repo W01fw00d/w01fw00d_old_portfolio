@@ -6,7 +6,8 @@ import CustomModal from './CustomModal';
 
 const imageChangeFrequency = 15000,
       fadeOutDuration = 1000,
-      modalButtonLabel = 'Show info';
+      modalButtonLabel = 'Show info',
+      galleryToolTip = 'Click to know more!';
 
 class Gallery extends Component {
     constructor(props) {
@@ -23,11 +24,10 @@ class Gallery extends Component {
     }
 
     changeImage() {
-        if (this.state.imageIndex === this.props.images.length - 1) {
-            this.setState({ imageIndex: 0 });
-        } else {
-            this.setState({ imageIndex: this.state.imageIndex + 1 });
-        }
+        this.setState({ 
+            imageIndex: (this.state.imageIndex === this.props.images.length - 1) ? 
+                0 : (this.state.imageIndex + 1) 
+        });
     }
     
     showModal() {
@@ -39,7 +39,7 @@ class Gallery extends Component {
     render() {           
         return (
             <div className="Gallery">
-                <div className="work-example-img pointer" title="Click to know more!" onClick={this.showModal}>
+                <div className="work-example-img pointer" title={galleryToolTip} onClick={this.showModal}>
                     <CrossfadeImage 
                         src={this.props.images[this.state.imageIndex]}
                         duration={fadeOutDuration}
