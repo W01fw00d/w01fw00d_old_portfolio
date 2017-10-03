@@ -26,19 +26,19 @@ class AppHeader extends Component {
         <div className="AppHeader">
             <div className="solid-header">
                 <Row>
-                    <Col xs="2">
+                    <Col className="avatar-icon" xs="2">
                         <Link to="/w01fw00d_portfolio/" >
                             <img src={avatar} className="avatar-logo" title="Home" alt="avatar" /> 
                         </Link>
                     </Col>
 
-                    <Col xs="6" className="id-info">
-                        <h4>{names.join(' ') + ' ' + surnames.join(' ')}</h4>
+                    <Col xs="6" md="5" className="id-info">
+                        <h4 className="complete-name">{names.join(' ') + ' ' + surnames.join(' ')}</h4>
                         <h4>{github.alias}</h4>
                     </Col>
 
-                    <Col xs="3">
-                        <p>Full-stack Web Developer</p>
+                    <Col xs="6" md="4">
+                        <p className="job-position">Full-stack Web Developer</p>
                         <div>
                             <a target="_blank" href={github.userUrl}>
                                 <img src={github_logo} className="small-logo spinning-logo" title="Github Account" alt="logo" />
@@ -59,14 +59,19 @@ class AppHeader extends Component {
 
                     </Col>
 
-                    <a target="_blank" href={github.portfolioUrl}>
+                    <a className="github-ribbon" target="_blank" href={github.portfolioUrl}>
                         <img className="github-ribbon" src="https://camo.githubusercontent.com/52760788cde945287fbb584134c4cbc2bc36f904/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f77686974655f6666666666662e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_white_ffffff.png" />
                     </a>
                 </Row>
             </div>
 
             <div>
-                <Button> <Link to="/w01fw00d_portfolio/techs"> Technologies </Link> </Button>
+                <Link className="hidden home-button" to="/w01fw00d_portfolio/">
+                    <Button> Home </Button>
+                </Link>
+                <Link to="/w01fw00d_portfolio/techs">
+                    <Button> Technologies </Button>
+                </Link>
                 <Button className="hidden"> Principles </Button>
                 <Button className="hidden"> Personal projects </Button>
             </div>

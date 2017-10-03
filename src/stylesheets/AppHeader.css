@@ -40,6 +40,20 @@
     border: 0;
 }
 
+@media (max-width: 765px) {
+    .avatar-icon, .complete-name, .job-position, .github-ribbon {
+        display: none;
+    }
+    
+    .home-button {
+        display: initial;
+    }
+    
+    .solid-header {
+        height: 70px;
+    }
+}
+
 /* ANIMATIONS */
 @keyframes flickerAnimation {
     0%   { opacity:1; }

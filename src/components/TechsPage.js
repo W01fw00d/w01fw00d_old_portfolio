@@ -15,21 +15,23 @@ import js6_logo from '../assets/logos/js6.png';
 import htmlCss_logo from '../assets/logos/html_css.png';
 import java_logo from '../assets/logos/java.png';
 import python_logo from '../assets/logos/python.png';
+import php_logo from '../assets/logos/php.png';
 
 const techs = [
-    {id: 1, type: 'framework', name: 'React', logo: react_logo},
-    {id: 2, type: 'framework', name: 'Backbone', logo: backbone_logo},
-    {id: 3, type: 'framework', name: 'Node', logo: node_logo},
-    {id: 4, type: 'framework', name: 'Cucumber & Gherkin', logo: cucumber_logo},
-    {id: 5, type: 'framework', name: 'Selenium', logo: selenium_logo},
-    {id: 6, type: 'framework', name: 'Angular', logo: angular_logo},
-    {id: 7, type: 'framework', name: 'Ionic', logo: ionic_logo},
-    {id: 8, type: 'framework', name: 'Laravel', logo: laravel_logo},
-    {id: 9, type: 'framework', name: 'Android', logo: android_logo},
-    {id: 10, type: 'language', name: 'ECMAScript 6', logo: js6_logo},
-    {id: 11, type: 'language', name: 'HTML5 & CSS3', logo: htmlCss_logo},
-    {id: 12, type: 'language', name: 'Java', logo: java_logo},
-    {id: 13, type: 'language', name: 'Python', logo: python_logo}
+    {type: 'framework', name: 'React', logo: react_logo, url: 'https://reactjs.org/'},
+    {type: 'framework', name: 'Backbone', logo: backbone_logo, url: 'http://backbonejs.org/'},
+    {type: 'framework', name: 'Node', logo: node_logo, url: 'https://nodejs.org/en/'},
+    {type: 'framework', name: 'Cucumber & Gherkin', logo: cucumber_logo, url: 'https://cucumber.io/'},
+    {type: 'framework', name: 'Selenium', logo: selenium_logo, url: 'http://www.seleniumhq.org/'},
+    {type: 'framework', name: 'Angular', logo: angular_logo, url: 'https://angular.io/'},
+    {type: 'framework', name: 'Ionic', logo: ionic_logo, url: 'https://ionicframework.com/'},
+    {type: 'framework', name: 'Laravel', logo: laravel_logo, url: 'https://laravel.com/'},
+    {type: 'framework', name: 'Android', logo: android_logo, url: 'https://www.android.com/'},
+    {type: 'language', name: 'ECMAScript 6', logo: js6_logo, url: 'http://es6-features.org/'},
+    {type: 'language', name: 'HTML5 & CSS3', logo: htmlCss_logo, url: 'https://www.w3.org/TR/html5/'},
+    {type: 'language', name: 'Java', logo: java_logo, url: 'https://www.java.com/'},
+    {type: 'language', name: 'Python', logo: python_logo, url: 'https://www.python.org/'},
+    {type: 'language', name: 'PHP', logo: php_logo, url: 'http://php.net/'}
 ];
 
 class TechsPage extends Component {
@@ -37,13 +39,17 @@ class TechsPage extends Component {
         let leftPositions = [],
             topPositions = [];
 
-        const techsTags = techs.map(tech => {
+        const techsTags = techs.map((tech, index) => {
             let imgStyle = {
                 left: this.getRandomNumber(leftPositions, window.innerWidth), //1200
                 bottom: this.getRandomNumber(topPositions, window.innerHeight - 150), //300
             };
 
-            return <img key={tech.id} src={tech.logo} title={tech.name} className="tech-logo" alt="logo" style={imgStyle} />
+            return (
+                <a key={index} target="_blank" href={tech.url}>
+                    <img key={index} src={tech.logo} title={tech.name} className="tech-logo" alt="logo" style={imgStyle} />
+                </a>
+            );
         });
 
         return (
