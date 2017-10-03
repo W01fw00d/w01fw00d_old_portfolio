@@ -66,7 +66,9 @@ class AppHeader extends Component {
             </div>
 
             <div>
-                <Button> <Link to="/w01fw00d_portfolio/techs"> Technologies </Link> </Button>
+                <Link to="/w01fw00d_portfolio/techs">
+                    <Button> Technologies </Button>
+                </Link>
                 <Button className="hidden"> Principles </Button>
                 <Button className="hidden"> Personal projects </Button>
             </div>
