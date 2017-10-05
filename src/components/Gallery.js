@@ -20,14 +20,18 @@ class Gallery extends Component {
         this.showModal = this.showModal.bind(this);
         
         this.changeImage = this.changeImage.bind(this);
-        setInterval(this.changeImage, imageChangeFrequency);
+        this.intervalID = setInterval(this.changeImage, imageChangeFrequency);
     }
-
+    
+    componentWillUnmount() {
+        clearInterval(this.intervalID);
+    }
+    
     changeImage() {
-        this.setState({ 
-            imageIndex: (this.state.imageIndex === this.props.images.length - 1) ? 
-                0 : (this.state.imageIndex + 1) 
-        });
+       this.setState({ 
+           imageIndex: (this.state.imageIndex === this.props.images.length - 1) ? 
+            0 : (this.state.imageIndex + 1) 
+        }); 
     }
     
     showModal() {

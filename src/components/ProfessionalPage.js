@@ -98,6 +98,7 @@ class ProfessionalPage extends Component {
                 </div>
                 
                 <h3 className="margin-top"> Contact: {email}</h3>
+                <br/>
             </div>
         );
     }

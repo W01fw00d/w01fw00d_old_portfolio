@@ -10,7 +10,6 @@ import angular_logo from '../assets/logos/angular.png';
 import ionic_logo from '../assets/logos/ionic.png';
 import laravel_logo from '../assets/logos/laravel.png';
 import android_logo from '../assets/logos/android.png';
-import git_logo from '../assets/logos/git.png';
 
 import js6_logo from '../assets/logos/js6.png';
 import htmlCss_logo from '../assets/logos/html_css.png';
@@ -28,7 +27,6 @@ const techs = [
     {type: 'framework', name: 'Ionic', logo: ionic_logo, url: 'https://ionicframework.com/'},
     {type: 'framework', name: 'Laravel', logo: laravel_logo, url: 'https://laravel.com/'},
     {type: 'framework', name: 'Android', logo: android_logo, url: 'https://www.android.com/'},
-    {type: 'framework', name: 'Git', logo: git_logo},
     {type: 'language', name: 'ECMAScript 6', logo: js6_logo, url: 'http://es6-features.org/'},
     {type: 'language', name: 'HTML5 & CSS3', logo: htmlCss_logo, url: 'https://www.w3.org/TR/html5/'},
     {type: 'language', name: 'Java', logo: java_logo, url: 'https://www.java.com/'},
