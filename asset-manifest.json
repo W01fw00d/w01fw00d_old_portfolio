@@ -1,8 +1,8 @@
 {
-  "main.css": "static/css/main.1a5d2673.css",
-  "main.css.map": "static/css/main.1a5d2673.css.map",
-  "main.js": "static/js/main.5ad4a880.js",
-  "main.js.map": "static/js/main.5ad4a880.js.map",
+  "main.css": "static/css/main.917d349e.css",
+  "main.css.map": "static/css/main.917d349e.css.map",
+  "main.js": "static/js/main.43e1b8e0.js",
+  "main.js.map": "static/js/main.43e1b8e0.js.map",
   "static\\media\\angular.png": "static/media/angular.de6493a9.png",
   "static\\media\\avatar_square.png": "static/media/avatar_square.230756d0.png",
   "static\\media\\backbone.png": "static/media/backbone.4936627d.png",
@@ -19,6 +19,7 @@
   "static\\media\\laravel.png": "static/media/laravel.a3acfb55.png",
   "static\\media\\linkedin.png": "static/media/linkedin.fa52c1c9.png",
   "static\\media\\node.png": "static/media/node.4b12dd41.png",
+  "static\\media\\php.png": "static/media/php.cfb123ce.png",
   "static\\media\\python.png": "static/media/python.e9722bca.png",
   "static\\media\\react.svg": "static/media/react.ee7cd8ed.svg",
   "static\\media\\selenium.png": "static/media/selenium.e3a8cc80.png"
